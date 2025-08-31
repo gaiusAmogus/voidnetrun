@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+p{
+    margin: 0;
+}
+span{
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    transition-duration: .2s;
+    color: $white;
+    &:hover {
+        text-decoration: none;
+        transition-duration: .2s;
+    }
+}
+.link{
+    &--red{
+        color: $red;
+        &:hover{
+            text-shadow: 0px 0px 20px rgba(141, 8, 8, 0.77);
+        }
+    }
+    &--white{
+        color: $white;
+        &:hover{
+            text-shadow: 0px 0px 20px rgba(233, 233, 233, 0.77);
+        }
+    }
+}
+h1,h2,h3,h4,h5, .title{
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    letter-spacing: 1.5px;
+}
+h1,
+.title--1{
+    font-size: 30px;
+    @media screen and (min-width: $min-lg){
+        font-size: 45px;
+    }
+    @media screen and (min-width: $min-xxl){
+        font-size: 60px;
+    }
+}
+h2,
+.title--2{
+    font-size: 25px;
+    letter-spacing: 0.9px;
+    @media screen and (min-width: $min-lg){
+        font-size: 30px;
+    }
+    @media screen and (min-width: $min-xxl){
+        font-size: 35px;
+    }
+
+}
+h3, h4, h5,
+.title--3{
+    font-size: 20px;
+    line-height: normal;
+    @media screen and (min-width: $min-lg){
+        font-size: 27px;
+    }
+    @media screen and (min-width: $min-xxl){
+        font-size: 30px;
+    }
+}
+h4,
+.title--4{
+    font-size: 18px;
+    line-height: normal;
+    @media screen and (min-width: $min-lg){
+        font-size: 22px;
+    }
+    @media screen and (min-width: $min-xxl){
+        font-size: 24px;
+    }
+}
+h5, 
+.title--5{ 
+    font-size: 16px;
+    line-height: normal;
+    @media screen and (min-width: $min-xxl){
+        font-size: 20px;
+    }
+}
+
+.text {
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    &--1{
+        font-size: 16px;
+        @media screen and (min-width: $min-lg){
+            font-size: 22px;
+
+        }
+    }
+    &--2{
+        font-size: 14px;
+        @media screen and (min-width: $min-lg){
+            font-size: 18px;
+        }
+    }
+    &--3{
+        font-size: 12px;
+        @media screen and (min-width: $min-lg){
+            font-size: 15px;
+        }
+    }
+}
+
+.textShadow{
+    &--white{
+        color: $white;
+        text-shadow: 0px 0px 20px rgba(233, 233, 233, 0.77);
+    }
+    &--red{
+        color: $red;
+        text-shadow: 0px 0px 20px rgba(141, 8, 8, 0.77);
+    }
+}
+.acr{
+    position: absolute;
+    font-size: 11px;
+    width: 25px;
+    color: $red;
+    text-shadow: 0px 0px 20px rgba(141, 8, 8, 0.77);
+    opacity: .7;
+    @media screen and (max-width: $max-lg){
+        font-size: 7px;
+        width: 15px;
+    }
+}
+
+#pageTitle{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    color: $red;
+    text-shadow: 0px 0px 15px rgba(141, 8, 8, 0.77);
+    font-size: 100px;
+    animation: titleShow 2s ease-in-out forwards;
+    opacity: 0;
+    white-space: nowrap;
+    @media screen and (max-width: $max-sm){
+        font-size: 35px;
+    }
+    @media screen and (min-width: $min-sm) and (max-width: $max-lg){
+        font-size: 60px;
+    }
+    @media screen and (min-width: $min-lg) and (max-width: $max-xl){
+        font-size: 80px;
+    }
+    @keyframes titleShow {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: .1;
+            @media screen and (max-width: $max-lg){
+                opacity: .05;
+            }
+        }
+    }
+}
+
+@keyframes opacityShow {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

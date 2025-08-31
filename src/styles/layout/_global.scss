@@ -1,0 +1,108 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+img {
+    max-width: 100%;
+}
+:focus {
+    outline: 0 !important;
+}
+section {
+    @media screen and (max-width: $max-lg){
+        padding: 0 20px;
+    }
+}
+.color{
+    &--red{
+        color: $red;
+    }
+    &--white{
+        color: $white;
+    }
+    &--black{
+        color: $black;
+    }
+}
+.background{
+    &--red{
+        background-color: $red;
+    }
+    &--white{
+        background-color: $white;
+    }
+    &--black{
+        background-color: $black;
+    }
+}
+.breadcrumbs {
+    margin-bottom: 20px;
+    background: $red;
+    padding: 5px 20px;
+    gap: 7px;
+    background: rgba(115, 5, 5, 0.3);
+
+    @media screen and (min-width: $min-md){
+        margin-bottom: 50px;
+    }
+    &__el {
+        opacity: .5;
+        letter-spacing: 1.5px;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--home {
+            text-transform: uppercase;
+        }
+        
+        &--separator {
+            cursor: initial;
+            opacity: .5 !important;
+        }
+
+        &--currentEl {
+            cursor: initial;
+            opacity: 1;
+        }
+    }
+}
+.sectionWrapper {
+    margin: 30px 0;
+
+    @media screen and (min-width: $min-md){
+        margin: 20px 0 50px;
+    }
+}
+@keyframes pulsate {
+    0% {
+        filter: drop-shadow(0px 0px 3px $red);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 10px $red);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px $red);
+    }
+}

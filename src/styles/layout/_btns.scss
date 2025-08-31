@@ -1,0 +1,68 @@
+.btn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 10px;
+    text-transform: uppercase;
+
+    &--primary{
+        background: rgba(129, 35, 35, 0.21);
+        border: 2px solid $red;
+        color: $white;
+
+        text-align: center;
+        text-shadow: 0px 0px 20px rgba(141, 8, 8, 0.77);
+        font-family: Oxanium;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: .2s ease-in-out;
+        @media screen and (max-width: $max-xxl){
+            font-size: 16px;
+        }
+        &:hover{
+            background: #130303;
+            color: $red;
+            text-shadow: 0px 0px 15px rgba(141, 8, 8, 0.77);
+
+        }
+    }
+}
+
+.corners{
+    position: relative;
+    &::before,
+    &::after{
+        content: '';
+        width: 63px;
+        height: 63px;
+        position: absolute;
+        transition: .2s ease-in-out;
+        pointer-events: none;
+        
+    }
+    &::before{
+        border-top: 2px solid $red;
+        border-left: 2px solid $red;
+        top: -7px;
+        left: -7px;
+    }
+    &::after{
+        border-bottom: 2px solid $red;
+        border-right: 2px solid $red;
+        bottom: -7px;
+        right: -7px;
+    }
+    &--hover{
+        &:hover{
+            &::before,
+            &::after{
+                width: 70%;
+                height: 70%;
+            }
+        }
+    }
+}

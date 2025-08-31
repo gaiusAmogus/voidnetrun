@@ -1,0 +1,251 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "slug": "kamilstanczak",
+            "title": "Kamil Stańczak",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "The website and online store of a Polish painter.",
+            "desc": "A small website for the artist where he presents his work, entirely made on WordPress, using ACF.</br></br> The website offers sections where you can read about the artist, browse an interesting gallery of works, and perhaps purchase some of the work produced by the painter in the online store, which runs on WooCommerce.",
+            "thumb": "assets/img/sites/kamilstanczak/1.jpg",
+            "images": [
+                "assets/img/sites/kamilstanczak/2.jpg",
+                "assets/img/sites/kamilstanczak/3.jpg",
+                "assets/img/sites/kamilstanczak/4.jpg"
+            ],
+            "link": "https://kamilstanczak.art"
+        },
+        {
+            "id": 2,
+            "slug": "futureprint",
+            "title": "Futureprint",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Business website of a 3D printing company.",
+            "desc": "Simple business website based on WordPress, with all sections being editable with ACF. A great example of how to present a complex business in a simple way.",
+            "thumb": "assets/img/sites/futureprint/1.jpg",
+            "images": [
+                "assets/img/sites/futureprint/2.jpg",
+                "assets/img/sites/futureprint/3.jpg"
+            ],
+            "link": "https://futureprint.pl"
+        },
+        {
+            "id": 3,
+            "slug": "el-in",
+            "title": "EL-IN",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Website for a company belonging to the group of leaders operating in railway, power and building constructions. Graphic design by DotLineCode.",
+            "desc": "A simple WordPress website using ACF to effectively present their business and ideals. It has classic subpages and 2 different CPTs in the form of implementation and local activities.</br></br> Furthermore, a timeline graph was made using GSAP scrollTrigger, something I was new to creating.",
+            "thumb": "assets/img/sites/el-in/1.jpg",
+            "images": [
+                "assets/img/sites/el-in/2.jpg",
+                "assets/img/sites/el-in/3.jpg"
+            ],
+            "link": "https://el-in.pl"
+        },
+        {
+            "id": 4,
+            "slug": "hairmeup",
+            "title": "Hair Me Up",
+            "category": "WordPress/WooCommerce",
+            "category_slug": "web",
+            "excerpt": "Website and store for a hairdressing salon in Krakow. Graphic design by DotLineCode.",
+            "desc": ".This hairdressing salon website was created using WordPress and WooCommerce. </br></br> All website elements are based on ACF, wth the store having product filtering using REST API. Additionally, the plugin works with a voucher system for points that you can earn by purchasing and retrieved at a later date.",
+            "thumb": "assets/img/sites/hairmeup/1.jpg",
+            "images": [
+                "assets/img/sites/hairmeup/2.jpg",
+                "assets/img/sites/hairmeup/3.jpg"
+            ],
+            "link": "https://hairmeup.pl"
+        },
+        {
+            "id": 5,
+            "slug": "dotlinecode",
+            "title": "DotLineCode",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Another artistic website full of animations for DotLineCode themselves. Graphic design by DotLineCode.",
+            "desc": "The website based on WordPress, made entirely using ACF.</br></br> The 3D models are animated using three.js and GSAP.</br></br> It works by the model having a saved animation, and scrolling the page simply moves it in time. In the absence of movement, individual elements of the model make micro-movements to maintain fluidity. After using the scroll, they move back to their original position before stopping, and then the animation continues. </br></br> Moreover, it was made so that the 3D model also reflects light as extra attention to detail and to fully complete the animation.",
+            "thumb": "assets/img/sites/dotlinecode/1.jpg",
+            "images": [
+                "assets/img/sites/dotlinecode/2.jpg",
+                "assets/img/sites/dotlinecode/3.jpg",
+                "assets/img/sites/dotlinecode/4.jpg",
+                "assets/img/sites/dotlinecode/5.jpg"
+            ],
+            "link": "https://dotlinecode.com"
+        },
+        {
+            "id": 6,
+            "slug": "wsti",
+            "title": "WSTI w Katowicach",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "A twin website of SWSM, composed entirely of ACF Block, thanks to which the client arranges the content himself. Graphic design by DotLineCode.",
+            "desc": "Great website for universities. The website is built on WordPress using ACF blocks, the implementation of this project consisted (with the exception of CPT) of creating editable blocks, with various variants, from which the client arranged his website himself. This is the twin website of SWSM.",
+            "thumb": "assets/img/sites/wsti/1.jpg",
+            "images": [
+                "assets/img/sites/wsti/2.jpg",
+                "assets/img/sites/wsti/3.jpg",
+                "assets/img/sites/wsti/4.jpg"
+            ],
+            "link": "https://www.wsti.pl"
+        },
+        {
+            "id": 7,
+            "slug": "swsm",
+            "title": "ŚWSM w Katowicach",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Quite a large university website. Graphic design by DotLineCode.",
+            "desc": "It is the main web page for SWSM University in Katowice.</br></br> The website is built on WordPress using ACF blocks, the main goal of this project was to (with the exception of CPT) create large editable blocks, that included many different variants, from which the client arranged his website himself in the way that suited them the most.  This website is the twin website of WSTI.",
+            "thumb": "assets/img/sites/swsm/1.jpg",
+            "images": [
+                "assets/img/sites/swsm/2.jpg",
+                "assets/img/sites/swsm/3.jpg",
+                "assets/img/sites/swsm/4.jpg",
+                "assets/img/sites/swsm/5.jpg"
+            ],
+            "link": "https://swsm.pl"
+        },
+        {
+            "id": 8,
+            "slug": "sinterit",
+            "title": "Sinterit",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Website for a 3D printer manufacturer. Graphic design by Funktional.",
+            "desc": "Medium-sized website for a 3D printer manufacturer.</br></br> WordPress-based site with editable content using ACF.</br></br> The website has many CPTs in the form of blogs, filtered using AJAX. </br></br> The website has a very interesting product set configurator, the elements of which are set by the customer in ACF, and are handled by JS on the front end. This can be accessed through this link;",
+            "thumb": "assets/img/sites/sinterit/1.jpg",
+            "images": [
+                "assets/img/sites/sinterit/2.jpg",
+                "assets/img/sites/sinterit/3.jpg",
+                "assets/img/sites/sinterit/4.jpg"
+            ],
+            "link": "https://sinterit.com/"
+        },
+        {
+            "id": 9,
+            "slug": "accent-for-professionals",
+            "title": "Accent for Professionals",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Another simple and direct website for a language school with beautiful illustrations. Graphic design by Funktional.",
+            "desc": "Simple business website based on WordPress. </br></br> All sections are editable with ACF. </br></br> A great example of how to present your business in a simple way.",
+            "thumb": "assets/img/sites/language_assessments/1.jpg",
+            "images": [
+                "assets/img/sites/language_assessments/2.jpg",
+                "assets/img/sites/language_assessments/3.jpg",
+                "assets/img/sites/language_assessments/4.jpg"
+            ],
+            "link": "https://assessments4professionals.com/?lang=en"
+        },
+        {
+            "id": 10,
+            "slug": "pandruk",
+            "title": "Pandruk",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "A very simple, visually straight forward website, with beautiful illustrations to present a printing business. Graphic design by Funktional.",
+            "desc": "Business website of a printing house built using WordPress. </br></br> All sections are editable using ACF. </br></br> On the webpage you can find information about business, products and undergoing projects. It was originally supposed to be integrated with Iwareprint, but their system did not allow building such a website structure and therefore it had to be adapted to suit the client.",
+            "thumb": "assets/img/sites/pandruk/1.jpg",
+            "images": [
+                "assets/img/sites/pandruk/2.jpg",
+                "assets/img/sites/pandruk/3.jpg",
+                "assets/img/sites/pandruk/4.jpg"
+            ],
+            "link": "https://pandruk.pl"
+        },
+        {
+            "id": 11,
+            "slug": "hungryeyes",
+            "title": "Hungry Eyes",
+            "category": "WordPress/WooCommerce",
+            "category_slug": "web",
+            "excerpt": "A website with kitchen recipes in the form of a blog, a shop and courses. Graphic design by Funktional.",
+            "desc": "Website used as a culinary blog, cooking guide and a dedicated online store. The website contains CPT with culinary recipes, and filtering made simple through ACF fields using AJAX. In addition, the website usually has an online store based on WooCommerce and specific sections with courses, which you can buy and complete using LearnDash, however it is disabled at the moment due to client’s choice. </br></br> As of right now, the owner has made some design changes, which means that some things on the website do not display as they should, but are actively being worked on.",
+            "thumb": "assets/img/sites/hungryeyes/1.jpg",
+            "images": [
+                "assets/img/sites/hungryeyes/2.jpg",
+                "assets/img/sites/hungryeyes/3.jpg",
+                "assets/img/sites/hungryeyes/4.jpg",
+                "assets/img/sites/hungryeyes/5.jpg",
+                "assets/img/sites/hungryeyes/6.jpg",
+                "assets/img/sites/hungryeyes/7.jpg"
+            ],
+            "link": "https://hungryeyes.pl"
+        },
+        {
+            "id": 12,
+            "slug": "gniazdo",
+            "title": "Gniazdo",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "A very artistic tattoo-based site, where almost all areas are animated. Graphic design by DotLineCode.",
+            "desc": "A website made for a tattoo studio based in Olkusz. </br></br> Made on WordPress, all content is editable using ACF or the built-in Gutenberg. </br></br> Every movement on the website triggers an animation, with most of them based on GSAP. The website contains an interesting gallery, a blog, portfolios of the different tattoo artists showing their previous work, and general information about the studio.",
+            "thumb": "assets/img/sites/gniazdo/1.jpg",
+            "images": [
+                "assets/img/sites/gniazdo/2.jpg",
+                "assets/img/sites/gniazdo/3.jpg",
+                "assets/img/sites/gniazdo/4.jpg"
+            ],
+            "link": "https://pracowniagniazdo.pl"
+        },
+        {
+            "id": 13,
+            "slug": "prosperplast",
+            "title": "Prosperplast",
+            "category": "WordPress/WooCommerce",
+            "category_slug": "web",
+            "excerpt": "Website and product catalog for one of the leading European producers of home and garden plastic products. Graphic design by Funktional.",
+            "desc": "A huge website built using WordPress, containing a catalog of products offered by Prosperplast. The catalog itself is based on the WooCommerce engine, however with the purchasing functions disabled. It is also available as a download in a .pdf format for offline and external use.</br></br> Aside from the catalog, the website has many pages filled with information about the company, alongside a blog with guides, a blog with trade fairs, and many more subpages. </br></br> All of these website’s sections operate using ACF.",
+            "thumb": "assets/img/sites/prosperplast/1.jpg",
+            "images": [
+                "assets/img/sites/prosperplast/2.jpg",
+                "assets/img/sites/prosperplast/3.jpg",
+                "assets/img/sites/prosperplast/4.jpg",
+                "assets/img/sites/prosperplast/5.jpg",
+                "assets/img/sites/prosperplast/6.jpg"
+            ],
+            "link": "https://prosperplast.com"
+        },
+        {
+            "id": 14,
+            "slug": "grochiproch",
+            "title": "Groch i Proch",
+            "category": "WordPress",
+            "category_slug": "web",
+            "excerpt": "Artistic website for a pirate metal band. Graphic design and development by me.",
+            "desc": "A website made for the band; “Groch i Proch”, featuring very artistic imagery and animation at every step, designed to cultivate a pirate-like atmosphere, capturing the essence of the pirate-metal band’s performances.</br></br> Most of the animation is done using scrollTrigger for GSAP.</br></br> As the website is still under construction, its’ plans for the future include for it to be expanded by include a blog, subpages with a gallery, descriptions of the band's songs and a merchandise store.",
+            "thumb": "assets/img/sites/grochiproch/1.jpg",
+            "images": [
+                "assets/img/sites/grochiproch/2.jpg",
+                "assets/img/sites/grochiproch/3.jpg",
+                "assets/img/sites/grochiproch/4.jpg",
+                "assets/img/sites/grochiproch/5.jpg",
+                "assets/img/sites/grochiproch/6.jpg",
+                "assets/img/sites/grochiproch/7.jpg"
+            ],
+            "link": "https://grochiproch.pl"
+        },
+        {
+            "id": 15,
+            "slug": "spacewar_in_space",
+            "title": "Spacewar in space",
+            "category": "Game",
+            "category_slug": "game",
+            "excerpt": "A simple browser 3D game using three.js, made as a college project.",
+            "desc": "A browser game made with the three.js engine, using openly available 3D models for a college assignment. The game works by having the player's object, a ship model, and a camera that are constantly moving forward. Navigation is made possible via the arrow keys changing the flight path of the ship, and the space bar firing a bullet (a cylinder emitting light every fraction of a second upon firing, made so for optimization purposes).</br></br>As for objectives, there are a total of 15 enemy spaceships scattered across the map which aim to shoot the player. If the player is hit by the enemy bullet, one of their three lives is taken away (with every gone resulting in “Game Over”), however if the player hits the enemy ship with their bullet, it adds a point to their overall score. The aim is to get as high of a score as possible in this infinite simulation. Many optimizations have been made to allow this browser game to run smoothly, such as the enemy ships only turning to face the player when shooting, and instead of rendering a new enemy ship upon getting hit, it simply instantly transports it to another location, giving the same illusion.</br></br>The environment which the player navigates through is generated at random, with planet-like being positioned differently each time the web page is refreshed (hitting such obstacle results in instant “Game Over”). The skybox was made to move alongside the ship so that the player is unable to exit the experience, remaining immersed in the gameplay.",
+            "thumb": "assets/img/sites/spacewar/1.jpg",
+            "images": [
+                "assets/img/sites/spacewar/2.jpg",
+                "assets/img/sites/spacewar/3.jpg",
+                "assets/img/sites/spacewar/4.jpg"
+            ],
+            "link": "https://spacewar.voidnetrun.it"
+        }
+    ]
+}
