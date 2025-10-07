@@ -1,6 +1,31 @@
 $red: #730505;
 $white: #E9E9E9;
 $black: #130303;
+$yellow: #F7E018;
+$violet: #771386;
+
+$colors: (
+    red: $red,
+    white: $white,
+    black: $black,
+    yellow: $yellow,
+    violet: $violet,
+);
+
+@each $name, $value in $colors {
+    .color--#{$name} {
+        color: $value;
+    }
+}
+
+@each $name, $value in $colors {
+    .bg--#{$name} {
+        background-color: $value;
+    }
+}
+
+
+
 
 $min-sm: 576px;
 $min-md: 790px;

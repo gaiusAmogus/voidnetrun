@@ -42,6 +42,64 @@ export default function Archive() {
         fetchProjects();
     }, []);
 
+    useEffect(() => {
+        const projects = document.querySelectorAll('.project');
+
+        const handleMouseMove = (e) => {
+            const project = e.currentTarget;
+            const rect = project.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * 10; // reaction: 10°
+            const rotateY = ((x - centerX) / centerX) * -10;
+
+            project.style.transform = `
+                perspective(1000px)
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+            `;
+
+            const glow = project.querySelector('.project__glow');
+            if (glow) {
+                glow.style.backgroundImage = `
+                    radial-gradient(
+                        circle at
+                        ${x}px
+                        ${y}px,
+                        #771386,
+                        #730505
+                    )
+                `;
+            }
+        };
+
+        const handleMouseLeave = (e) => {
+            const project = e.currentTarget;
+            project.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            const glow = project.querySelector('.project__glow');
+            if (glow) glow.style.backgroundImage = '';
+        };
+
+        projects.forEach((project) => {
+            project.addEventListener('mousemove', handleMouseMove);
+            project.addEventListener('mouseleave', handleMouseLeave);
+        });
+
+        return () => {
+            projects.forEach((project) => {
+                project.removeEventListener('mousemove', handleMouseMove);
+                project.removeEventListener('mouseleave', handleMouseLeave);
+            });
+        };
+    }, [projects]);
+
+
+
     const handleBackHomepage = () => navigate('/');
 
     const handleProjectClick = (slug) => {
@@ -62,18 +120,21 @@ export default function Archive() {
                             </div>
                         </div>
                     </div>
+
                     <div className="row" ref={contentRef}>
                         <div className="col-12">
                             <h2 className="title title--1 textShadow--white" data-text="[PROJECTS_DATA: LOADED]" ref={titleRef}>
                                 {textType('[PROJECTS_DATA: LOADED]')}
                             </h2>
                         </div>
-                    </div>
-                    <div className="row">
+
                         {projects.map(project => (
                             <div key={project.id} className="col-12 col-md-6 col-xl-4 ">
                                 <div className="project" onClick={() => handleProjectClick(project.slug)}>
-                                    <div className="project__bg"></div>
+                                    <div className="project__bg">
+                                        <div className="project__glow"></div>
+
+                                    </div>
                                     <div className="project__wrapper d-flex flex-column">
 
                                         <div className={`project__category project__category--${project.category_slug}`}>
@@ -104,7 +165,31 @@ export default function Archive() {
                                 </div>
                             </div>
                         ))}
+
+                        <div className="col-12">
+                            <div className="archive__underinfo">
+                                <h4>WARNING: Data integrity compromised. Archive upload incomplete.<br /></h4>
+                                <p class="title--5">
+                                    Displayed projects represent only a partial dataset. <br />
+                                    Proceed with caution. <br /><br /> 
+                                    <i class="color--yellow">Developer Note: These are not all the projects. </i>
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
+                                <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHomepage}>PORTFOLIO_CORE</div>
+                                <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>
+                                <div className="breadcrumbs__el breadcrumbs__el--currentEl">PROJECT_MAINFRAME</div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

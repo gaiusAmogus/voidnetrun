@@ -20,12 +20,17 @@ export default function About() {
         { title: 'WordPress', lvl: 3 }
     ];
 
+    const startYear = 2019;
+    const currentYear = new Date().getFullYear();
+    const experience = `${currentYear - startYear} years`;
+
     const descriptions = [
-        { label: 'Object:', value: 'Dawid Jedynak' },
+        { label: 'Object:', value: 'Dawid Jedynak' }, 
         { label: 'Age:', value: 'no data' },
         { label: 'Location:', value: 'Somewhere in Poland' },
-        { label: 'Experience:', value: '5 years' },
+        { label: 'Experience:', value: experience },
     ];
+
 
     // Start fade animation
     useAnimFrom(contentRef, 'down');
@@ -156,7 +161,7 @@ export default function About() {
                                 <div className="aboutData__cv__part__content">
                                     <div className="aboutData__cv__part__content__el">
                                         <p className="text text--1">
-                                            [10.2024 - present]<br />
+                                            [10.2024 - 09.2025]<br />
                                             <b>Frontend Developer at Acclaim</b>
                                         </p>
                                         <p className="text text--3">
@@ -306,6 +311,16 @@ export default function About() {
                             </div>
                         </div>
                     </div>      
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                            <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
+                            <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHomepage}>PORTFOLIO_CORE</div>
+                            <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>
+                            <div className="breadcrumbs__el breadcrumbs__el--currentEl">USER_PROFILE</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -217,10 +217,10 @@
                 top: -5px;
                 left: -200px;
                 .aboutData__brain__skillBar__inner__title{
-                    color: #F7E018;
+                    color: $yellow;
                 }
                 .aboutData__brain__skillBar__pointer svg path{
-                    stroke: #F7E018;
+                    stroke: $yellow;
                 }
                 .aboutData__brain__skillBar__pointer{
                     left: 100%;
@@ -383,8 +383,8 @@
                                 filter: drop-shadow(0px 0px 10px $red);
                             }
                             100%{
-                                fill: #F7E018;
-                                filter: drop-shadow(0px 0px 10px #F7E018);
+                                fill: $yellow;
+                                filter: drop-shadow(0px 0px 10px $yellow);
                             }
                         }
                     }

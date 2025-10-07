@@ -41,8 +41,6 @@ export default function ArchiveProject() {
         }
     }, [project]);
 
-
-
     const handleBackHome = () => navigate('/');
     const handleBackArchive = () => navigate('/archive');
 
@@ -102,8 +100,28 @@ export default function ArchiveProject() {
                             )}
                         </div>
                     </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
+                                <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHome}>
+                                    PORTFOLIO_CORE
+                                </div>
+                                <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>
+                                <div className="breadcrumbs__el" onClick={handleBackArchive}>PROJECT_MAINFRAME</div>
+                                <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>
+                                <div className="breadcrumbs__el breadcrumbs__el--currentEl">
+                                    {project.title}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     );
+
+    
 }
