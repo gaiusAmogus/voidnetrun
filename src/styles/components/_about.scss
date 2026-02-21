@@ -25,30 +25,30 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        &__list{
-            &__el{
+        &-list{
+            &-el{
                 text-transform: uppercase;
-                &__val{
+                &-val{
                     display: inline-block;
                     opacity: 0;
                 }
                 &--0{
-                    .aboutData__desc__list__el__val{
+                    .aboutData__desc-list-el-val{
                         animation: listEl .5s ease-in-out forwards;
                     }
                 }
                 &--1{
-                    .aboutData__desc__list__el__val{
+                    .aboutData__desc-list-el-val{
                         animation: listEl .5s ease-in-out .5s forwards;
                     }
                 }
                 &--2{
-                    .aboutData__desc__list__el__val{
+                    .aboutData__desc-list-el-val{
                         animation: listEl .5s ease-in-out 1s forwards;
                     }
                 }
                 &--3{
-                    .aboutData__desc__list__el__val{
+                    .aboutData__desc-list-el-val{
                         animation: listEl .5s ease-in-out 1.5s forwards;
                     }
                 }
@@ -62,14 +62,14 @@
                 }
             }
         }
-        &__desc {
+        &-desc {
             letter-spacing: 1.5px;
             text-align: justify;
         }
     }
 
     &__human{
-        &__inner{
+        &-inner{
             width: 100%;
             height: 100%;
             border: 2px solid $red;
@@ -86,7 +86,8 @@
             }
         }
     }
-    &__brainCol{
+
+    &__brain-col{
         @media screen and (min-width: $min-xl){
             min-height: 350px;
         }
@@ -109,7 +110,7 @@
             gap: 15px 10px;
             margin: 0 auto;
         }
-        &__analyse{
+        &-analyse{
             display: flex;
             width: fit-content;
             padding: 20px 15px;
@@ -152,7 +153,7 @@
                 }
             }
         }
-        &__inner{
+        &-inner{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -169,7 +170,7 @@
                 filter: drop-shadow(0px 0px 10px $red);
             }
         }
-        &__skillBar{
+        &-skillBar{
             position: absolute;
             width: 162px;
             height: 57px;
@@ -179,7 +180,7 @@
                 width: 100%;
                 height: auto;
             }
-            &__inner{
+            &-inner{
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -192,21 +193,22 @@
                     background: rgba(0, 0, 0, 0.20);
                     border: 2px solid $red;
                 }
-                &__title{
+                &-title{
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
                 }
 
-                &__lvl{
+                &-lvl{
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
+                    color: $red;
                 }
             }
-            &__pointer{
+            &-pointer{
                 position: absolute;
                 top: 50%;
                 @media screen and (max-width: $max-lg){
@@ -216,39 +218,39 @@
             &--0{
                 top: -5px;
                 left: -200px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: $yellow;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: $yellow;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     left: 100%;
                 }
             }
             &--1{
                 top: -20px;
                 right: -220px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: #F16529;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: #F16529;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     right: 100%
                 }
             }
             &--2{
                 top: 85px;
                 left: -230px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: #61DAFB;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: #61DAFB;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     left: 100%;
                     top: -14px;
                 }
@@ -256,26 +258,26 @@
             &--3{
                 top: 75px;
                 right: -210px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: #13ED0F;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: #13ED0F;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     right: 100%
                 }
             }
             &--4{
                 top: 183px;
                 right: -210px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: #4F5B93;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: #4F5B93;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     right: 100%;
                     top: -39px;
                 }
@@ -283,13 +285,13 @@
             &--5{
                 top: 255px;
                 left: -80px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: #9D6193;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: #9D6193;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     left: 100%;
                     top: -60px;
                 }
@@ -297,13 +299,13 @@
             &--6{
                 top: 255px;
                 right: -25px;
-                .aboutData__brain__skillBar__inner__title{
+                .aboutData__brain-skillBar-inner-title{
                     color: #32373C;
                 }
-                .aboutData__brain__skillBar__pointer svg path{
+                .aboutData__brain-skillBar-pointer svg path{
                     stroke: #32373C;
                 }
-                .aboutData__brain__skillBar__pointer{
+                .aboutData__brain-skillBar-pointer{
                     top: -77px;
                     left: 0;
                 }
@@ -321,7 +323,7 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
-            .aboutData__brain__skillBar{
+            .aboutData__brain-skillBar{
                 &--0,
                 &--1,
                 &--2,
@@ -362,7 +364,7 @@
                 }
 
             }
-            .aboutData__brain__inner{
+            .aboutData__brain-inner{
                 opacity: 1;
                 svg{
                     #Vector_2,
@@ -470,6 +472,7 @@
             }
         }
     }
+
     &__cv{
         display: flex;
         flex-direction: column;
@@ -479,11 +482,11 @@
             text-shadow: 0px 0px 20px rgba(233, 233, 233, 0.77);
             font-weight: 600;
         }
-        &__part{
+        &-part{
             display: flex;
             flex-direction: column;
             gap: 15px;
-            &__content{
+            &-content{
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -492,7 +495,7 @@
                 @media screen and (max-width: $max-lg){
                     padding-left: 10px;
                 }
-                &__el {
+                &-el {
                     margin-bottom: 10px;
                     p{
                         margin-bottom: 10px;

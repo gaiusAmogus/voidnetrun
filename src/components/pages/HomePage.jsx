@@ -91,11 +91,11 @@ export default function HomePage() {
 
                                 <div ref={module0Ref} className="dataModule dataModule--0" onClick={handleModule0Click} >
                                     <div className="dataModule__inner d-flex  corners corners--hover">
-                                        <div className="dataModule__inner__bg">
-                                            <div className="dataModule__inner__bg__cut"></div>
+                                        <div className="dataModule__inner-bg">
+                                            <div className="dataModule__inner-bg-cut"></div>
                                         </div>
-                                        <div className="dataModule__inner__leftbar d-flex align-items-center justify-content-center"></div>
-                                        <div className="dataModule__inner__content d-flex align-items-center justify-content-between position-relative">
+                                        <div className="dataModule__inner-leftbar d-flex align-items-center justify-content-center"></div>
+                                        <div className="dataModule__inner-content d-flex align-items-center justify-content-between position-relative">
                                             <div className="d-flex flex-column">
                                                 <h3 className="title title--3">ACCESS: PROJECT_MAINFRAME</h3>
                                                 <p>
@@ -111,11 +111,11 @@ export default function HomePage() {
 
                                 <div ref={module1Ref} className="dataModule dataModule--1" onClick={handleModule1Click} >
                                     <div className="dataModule__inner d-flex  corners corners--hover">
-                                        <div className="dataModule__inner__bg">
-                                            <div className="dataModule__inner__bg__cut"></div>
+                                        <div className="dataModule__inner-bg">
+                                            <div className="dataModule__inner-bg-cut"></div>
                                         </div>
-                                        <div className="dataModule__inner__leftbar d-flex align-items-center justify-content-center"></div>
-                                        <div className="dataModule__inner__content d-flex align-items-center justify-content-between position-relative">
+                                        <div className="dataModule__inner-leftbar d-flex align-items-center justify-content-center"></div>
+                                        <div className="dataModule__inner-content d-flex align-items-center justify-content-between position-relative">
                                             <div className="d-flex flex-column">
                                                 <h3 className="title title--3">ACCESS: USER_PROFILE</h3>
                                                 <p>
@@ -131,11 +131,11 @@ export default function HomePage() {
 
                                 <div ref={module2Ref} className="dataModule dataModule--2" id="glitchModule" >
                                     <div className="dataModule__inner d-flex  corners" ref={glitchModuleRef}>
-                                        <div className="dataModule__inner__bg">
-                                            <div className="dataModule__inner__bg__cut"></div>
+                                        <div className="dataModule__inner-bg">
+                                            <div className="dataModule__inner-bg-cut"></div>
                                         </div>
-                                        <div className="dataModule__inner__leftbar d-flex align-items-center justify-content-center"></div>
-                                        <div className="dataModule__inner__content d-flex align-items-center justify-content-between position-relative">
+                                        <div className="dataModule__inner-leftbar d-flex align-items-center justify-content-center"></div>
+                                        <div className="dataModule__inner-content d-flex align-items-center justify-content-between position-relative">
                                             <div className="d-flex flex-column">
                                                 <h3 className="title title--3 color--red">
                                                     ERROR: [CODE: 0x3F7A]

@@ -71,10 +71,10 @@ export default function LoadingBar({ onFinish }) {
           style={{ width: `calc(${percent}% - 60px)` }}
         ></div>
         <div className="loadingBar__line loadingBar__line--1">
-          <div className="loadingBar__line__el"></div>
+          <div className="loadingBar__line-el"></div>
         </div>
         <div className="loadingBar__line loadingBar__line--2">
-          <div className="loadingBar__line__el"></div>
+          <div className="loadingBar__line-el"></div>
         </div>
         <div className="loadingBar__cascates"></div>
         <div className="loadingBar__warning">WARNING!! Do not turn off</div>

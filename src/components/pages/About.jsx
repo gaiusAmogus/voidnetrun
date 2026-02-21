@@ -4,6 +4,12 @@ import { getSvg } from '../../functions/svgLoader';
 import { customScrollbar } from '../../functions/customScrollbar';
 import { TextScramble, textType } from '../../functions/textScramble';
 import { useAnimFrom } from '../../functions/animTransform';
+import useAcronym from '../../functions/acronym';
+
+function SkillLevelAcronym() {
+    const levelAcronym = useAcronym(4);
+    return levelAcronym;
+}
 
 export default function About() {
     const sectionRef = useRef(null);
@@ -11,13 +17,13 @@ export default function About() {
     const navigate = useNavigate();
 
     const skills = [
-        { title: 'Javascript', lvl: 3 },
-        { title: 'HTML/CSS/SASS', lvl: 5 },
-        { title: 'React', lvl: 1 },
-        { title: 'UI', lvl: 1 },
-        { title: 'PHP', lvl: 3 },
-        { title: 'WooCommerce', lvl: 3 },
-        { title: 'WordPress', lvl: 3 }
+        { title: 'Javascript' },
+        { title: 'HTML/CSS/SASS' },
+        { title: 'React' },
+        { title: 'UI' },
+        { title: 'PHP' },
+        { title: 'WooCommerce' },
+        { title: 'WordPress' }
     ];
 
     const startYear = 2019;
@@ -42,7 +48,7 @@ export default function About() {
         customScrollbar(sectionRef.current);
 
         // Scramble text
-        const descEls = aboutEl.querySelectorAll('.aboutData__desc__list__el__val');
+        const descEls = aboutEl.querySelectorAll('.aboutData__desc-list-el-val');
         descEls.forEach((el, i) => {
         setTimeout(() => {
             const fx = new TextScramble(el);
@@ -51,7 +57,7 @@ export default function About() {
         });
 
         // Brain / glitch animation
-        const analyse = aboutEl.querySelector('.aboutData__brain__analyse');
+        const analyse = aboutEl.querySelector('.aboutData__brain-analyse');
         const brain = aboutEl.querySelector('.aboutData__brain');
         if (analyse && brain) {
         
@@ -67,7 +73,7 @@ export default function About() {
 
             setTimeout(() => {
                 analyse.children[0].textContent = 'SUCCESS';
-                analyse.classList.add('aboutData__brain__analyse--anim');
+                analyse.classList.add('aboutData__brain-analyse--anim');
             }, 4000);
             setTimeout(() => {
                 analyse.remove();
@@ -86,14 +92,13 @@ export default function About() {
     ];
 
     const renderSkill = (skill, index) => {
-    const levels = { 1:'JUNIOR',2:'JUNIOR/MID',3:'MID',4:'MID/SENIOR',5:'SENIOR' };
     return (
-        <div key={index} className={`aboutData__brain__skillBar aboutData__brain__skillBar--${index}`}>
-        <div className="aboutData__brain__skillBar__inner">
-            <div className="aboutData__brain__skillBar__inner__title">{skill.title}</div>
-            <div className="aboutData__brain__skillBar__inner__lvl">LEVEL: {levels[skill.lvl]}</div>
+        <div key={index} className={`aboutData__brain-skillBar aboutData__brain-skillBar--${index}`}>
+        <div className="aboutData__brain-skillBar-inner">
+            <div className="aboutData__brain-skillBar-inner-title">{skill.title}</div>
+            <div className="aboutData__brain-skillBar-inner-lvl"><SkillLevelAcronym /></div>
         </div>
-        <div className="aboutData__brain__skillBar__pointer">
+        <div className="aboutData__brain-skillBar-pointer">
             {getSvg(pointerNames[index])}
         </div>
         </div>
@@ -123,14 +128,14 @@ export default function About() {
                     </div>
                     <div className="col-12 col-lg-5">
                     <div className="aboutData__desc">
-                        <div className="aboutData__desc__list">
+                        <div className="aboutData__desc-list">
                         {descriptions.map((desc, i) => (
-                            <div key={i} className={`text text--1 aboutData__desc__list__el aboutData__desc__list__el--${i}`}>
-                            {desc.label} <p className="aboutData__desc__list__el__val" data-text={desc.value}>{textType(desc.value)}</p>
+                            <div key={i} className={`text text--1 aboutData__desc-list-el aboutData__desc-list-el--${i}`}>
+                            {desc.label} <p className="aboutData__desc-list-el-val" data-text={desc.value}>{textType(desc.value)}</p>
                             </div>
                         ))}
                         </div>
-                        <div className="aboutData__desc__desc">
+                        <div className="aboutData__desc-desc">
                         <p className="text text--2">
                             Frontend Developer with many years of experience, specializing in creating WordPress 
                             templates and WooCommerce stores. Quickly learns new technologies, works efficiently 
@@ -142,24 +147,34 @@ export default function About() {
                     </div>
                     <div className="col-12 col-lg-3 d-none d-lg-block">
                     <div className="aboutData__human">
-                        <div className="aboutData__human__inner">{getSvg('human')}</div>
+                        <div className="aboutData__human-inner">{getSvg('human')}</div>
                     </div>
                     </div>
-                    <div className="col-12 aboutData__brainCol">
+                    <div className="col-12 aboutData__brain-col">
                     <div className="aboutData__brain">
-                        <div className="aboutData__brain__analyse corners">
+                        <div className="aboutData__brain-analyse corners">
                         <p>ANALYSIS IN PROGRESS...</p>
                         </div>
-                        <div className="aboutData__brain__inner">{getSvg('brain')}</div>
+                        <div className="aboutData__brain-inner">{getSvg('brain')}</div>
                         {skills.map(renderSkill)}
                     </div>
                     </div>
                     <div className="col-12">
                         <div className="aboutData__cv">
-                            <div className="aboutData__cv__part">
-                            <h3 className="aboutData__cv__part__title">[Work Experience]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <div className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                            <h3 className="aboutData__cv-part-title">[Work Experience]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <div className="aboutData__cv-part-content-el">
+                                        <p className="text text--1">
+                                            [11.2025 - Present]<br />
+                                            <b>WordPress Developer at TS Marketing</b>
+                                        </p>
+                                        <p className="text text--3">
+                                            Creating, optimizing, debugging, and managing websites based on WordPress and WooCommerce, 
+                                            resolving SEO issues, providing customer support, and maintaining existing solutions, extracting and analyzing data from analytics tools
+                                        </p>
+                                    </div>
+                                    <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
                                             [10.2024 - 09.2025]<br />
                                             <b>Frontend Developer at Acclaim</b>
@@ -168,8 +183,8 @@ export default function About() {
                                             Creating, optimizing, debugging, and managing websites based on WordPress and WooCommerce, 
                                             resolving SEO issues, providing customer support, and maintaining existing solutions
                                         </p>
-                                        </div>
-                                        <div className="aboutData__cv__part__content__el">
+                                    </div>
+                                    <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
                                             [08.2022 - 08.2024]<br />
                                             <b>Frontend Developer at DotLineCode</b>
@@ -179,8 +194,8 @@ export default function About() {
                                             Using ACF, REST API, design and implementation systems dedicated to the client. 
                                             Creating animations using three.js and GSAP, servicing, operation and optimization of websites.
                                         </p>
-                                        </div>
-                                        <div className="aboutData__cv__part__content__el">
+                                    </div>
+                                    <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
                                             [02.2021 - 07.2022]<br />
                                             <b>Frontend Developer at Funktional</b>
@@ -190,8 +205,8 @@ export default function About() {
                                             Creation of stores based on WooCommerce. 
                                             Website servicing, operation and optimization.
                                         </p>
-                                        </div>
-                                        <div className="aboutData__cv__part__content__el">
+                                    </div>
+                                    <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
                                             [09.2020 - 01.2021]<br />
                                             <b>Junior Frontend Developer at Millenium Studio</b>
@@ -201,8 +216,8 @@ export default function About() {
                                             Simple stores based on WooCommerce and PrestaShop.
                                             Servicing, operation and website optimization.
                                         </p>
-                                        </div>
-                                        <div className="aboutData__cv__part__content__el">
+                                    </div>
+                                    <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
                                             [09.2019 – 07.2020]<br />
                                             <b>Junior Frontend Developer at CODESTICK</b>
@@ -216,20 +231,20 @@ export default function About() {
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Education]</h3>
-                                    <div className="aboutData__cv__part__content">
-                                        <div className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Education]</h3>
+                                    <div className="aboutData__cv-part-content">
+                                        <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1"><b>Computer Science Engineer</b><br /></p>
                                         <p className="text text--3">College of Business - National Louis University located in Nowy Sącz [02/2023 – Present]</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Skills]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <ul className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Skills]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <ul className="aboutData__cv-part-content-el">
                                         <li className="text text--1">HTML5 / CSS3 / SASS</li>
                                         <li className="text text--1">RWD / Mobile-first</li>
                                         <li className="text text--1">JavaScript / jQuery</li>
@@ -244,10 +259,10 @@ export default function About() {
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Soft Skills]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <ul className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Soft Skills]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <ul className="aboutData__cv-part-content-el">
                                         <li className="text text--1">Teamwork</li>
                                         <li className="text text--1">Ability to work under pressure</li>
                                         <li className="text text--1">Communication skills</li>
@@ -261,20 +276,20 @@ export default function About() {
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Languages]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <ul className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Languages]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <ul className="aboutData__cv-part-content-el">
                                         <li className="text text--1">Polish (native)</li>
                                         <li className="text text--1">English (B2)</li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Other Skills]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <ul className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Other Skills]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <ul className="aboutData__cv-part-content-el">
                                         <li className="text text--1">Reserve Corporal, Polish Army</li>
                                         <li className="text text--1">Basic knowledge of graphic programs and UI design <br /> <span className="text text--3">(Photoshop, Figma)</span></li>
                                         <li className="text text--1">Basic video editing <br /> <span className="text text--3">(DaVinci Resolve)</span></li>
@@ -285,10 +300,10 @@ export default function About() {
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Courses and qualifications]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <ul className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Courses and qualifications]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <ul className="aboutData__cv-part-content-el">
                                         <li className="text text--1">98-364:MTA Database Fundamentals</li>
                                         <li className="text text--1">98-367:MTA Security Fundamentals</li>
                                         <li className="text text--1">98-361:MTA Software Development Fundamentals</li>
@@ -297,10 +312,10 @@ export default function About() {
                                 </div>
                             </div>
 
-                            <div className="aboutData__cv__part">
-                                <h3 className="aboutData__cv__part__title">[Interests]</h3>
-                                <div className="aboutData__cv__part__content">
-                                    <ul className="aboutData__cv__part__content__el">
+                            <div className="aboutData__cv-part">
+                                <h3 className="aboutData__cv-part-title">[Interests]</h3>
+                                <div className="aboutData__cv-part-content">
+                                    <ul className="aboutData__cv-part-content-el">
                                         <li className="text text--1">HEMA (Historical European Martial Arts)</li>
                                         <li className="text text--1">Horse Riding</li>
                                         <li className="text text--1">Music production</li>

@@ -4,13 +4,13 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer__row">
-                <div className="footer__row__el footer__row__el--1">
-                    <div className="footer__row__el__content">
+                <div className="footer__row-el footer__row-el--1">
+                    <div className="footer__row-el-content">
                         <p><span>SYSTEM CREATED BY DAWID JEDYNAK</span></p>
                         <p><span>AS A PORTFOLIO</span></p>
                     </div>
                 </div>
-                <div className="footer__row__el footer__row__el--2">
+                <div className="footer__row-el footer__row-el--2">
                     <p>
                         <span>If you want to offer me cooperation write to </span>
                         <a href="mailto:contact@voidnetrun.it" className="link link--red">

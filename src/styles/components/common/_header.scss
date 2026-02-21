@@ -21,7 +21,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 15px 0;
-        &__el{
+        &-el{
             display: flex;
             flex-direction: column;
             @media screen and (max-width: $max-sm){

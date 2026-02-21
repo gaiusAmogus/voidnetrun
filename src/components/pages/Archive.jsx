@@ -167,7 +167,7 @@ export default function Archive() {
                         ))}
 
                         <div className="col-12">
-                            <div className="archive__underinfo">
+                            <div className="archive__under-info">
                                 <h4>WARNING: Data integrity compromised. Archive upload incomplete.<br /></h4>
                                 <p class="title--5">
                                     Displayed projects represent only a partial dataset. <br />

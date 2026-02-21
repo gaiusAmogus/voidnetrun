@@ -56,12 +56,12 @@ export default function Header() {
     return (
         <header className="header">
             <div className="header__row">
-                <div className="header__row__el header__row__el--1">
+                <div className="header__row-el header__row-el--1">
                     <p id="userSystem">User System: <span></span></p>
                     <p id="userBrowser">Browser: <span></span></p>
                     <p id="userIP">IP Address: <span></span></p>
                 </div>
-                <div className="header__row__el header__row__el--2">
+                <div className="header__row-el header__row-el--2">
                     <p id="userTime">User time: <span></span></p>
                     <p id="userLocation">Location: <span></span></p>
                     <p id="userBat">User battery status: <span></span></p>
