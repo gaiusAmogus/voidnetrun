@@ -113,7 +113,7 @@
         right: 0;
         transform: translateY(-50%);
         display: flex;
-        animation: hideCascates .3s forwards 3.2s;
+        animation: hideCascates .3s forwards 1.536s;
         @media screen and (max-width: $max-lg){
             top: calc(50% + 60px);
         }
@@ -132,7 +132,7 @@
                 font-size: 8px;
             }
             content:"";
-            animation: initText 2.4s ease  forwards;
+            animation: initText 1.152s ease  forwards;
             @keyframes initText {
                 0% { content: "Booting up neural interface . . ." }
                 7% { content: "Booting up neural interface . . . \00000a Integrating cybernetic modules . . ." }
@@ -160,7 +160,7 @@
         left: 0;
         transform: translateY(-50%);
         display: flex;
-        animation: hideCascates .3s forwards 3.2s;
+        animation: hideCascates .3s forwards 1.536s;
 
         color: $red;
         font-family: Oxanium;
@@ -181,10 +181,11 @@
             opacity: 0;
         }
     }
+
     &--anim{
         .loadingBar__percent{
             opacity: 0;
-            animation: blink .5s ease-in-out 2;
+            animation: blink .5s ease-in-out 0.96;
             @keyframes blink {
                 0%, 100% {
                   opacity: 0;
@@ -196,7 +197,7 @@
         }
         .loadingBar__box{
             opacity: 0;
-            animation: blink .5s ease-in-out 2;
+            animation: blink .5s ease-in-out 0.96;
             @keyframes blink {
                 0%, 100% {
                   opacity: 0;
@@ -207,7 +208,7 @@
             }
         }
         .loadingBar__load{
-            animation: hideLoad 1.7s forwards;
+            animation: hideLoad 0.816s forwards;
             @keyframes hideLoad{
                 0%{
                     opacity: 1;
@@ -218,7 +219,7 @@
             }
         }
         .loadingBar__line--1{
-            animation: goTop 1.5s 1s forwards;
+            animation: goTop 1.5s 0.48s forwards;
             @keyframes goTop{
                 0%{
                     top: calc(50% - 8px);
@@ -231,7 +232,7 @@
             }
         }
         .loadingBar__line--2{
-            animation: goDown 1.5s 1s forwards;
+            animation: goDown 1.5s 0.48s forwards;
             @keyframes goDown{
                 0%{
                     bottom: calc(50% - 7px);

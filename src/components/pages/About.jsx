@@ -17,11 +17,11 @@ export default function About() {
     const navigate = useNavigate();
 
     const skills = [
-        { title: 'Javascript' },
-        { title: 'HTML/CSS/SASS' },
-        { title: 'React' },
-        { title: 'UI' },
-        { title: 'PHP' },
+        { title: 'JavaScript/React ' },
+        { title: 'HTML5/CSS3/SASS' },
+        { title: 'GSAP/Three.js' },
+        { title: 'UI/Figma' },
+        { title: 'PHP/Rest API' },
         { title: 'WooCommerce' },
         { title: 'WordPress' }
     ];
@@ -113,6 +113,9 @@ export default function About() {
                 <div className="row">
                     <div className="col-12">
                         <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                            <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex" onClick={handleBackHomepage}>
+                                {getSvg('arrow_left')} 
+                            </div>
                             <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                             <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHomepage}>PORTFOLIO_CORE</div>
                             <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>
@@ -122,205 +125,217 @@ export default function About() {
                 </div>
                 <div className="row" ref={contentRef}>
                     <div className="col-12 col-lg-4">
-                    <div className="aboutData__prof">
-                        <img src={`${window.location.origin}/assets/img/prof.jpg`} alt="profilPicture" />
+                        <div className="aboutData__prof">
+                            <img src={`${window.location.origin}/assets/img/prof.jpg`} alt="profilPicture" />
+                        </div>
                     </div>
-                    </div>
-                    <div className="col-12 col-lg-5">
-                    <div className="aboutData__desc">
-                        <div className="aboutData__desc-list">
-                        {descriptions.map((desc, i) => (
-                            <div key={i} className={`text text--1 aboutData__desc-list-el aboutData__desc-list-el--${i}`}>
-                            {desc.label} <p className="aboutData__desc-list-el-val" data-text={desc.value}>{textType(desc.value)}</p>
+
+                    <div className="col-12 col-lg-8">
+                        <div className="aboutData__desc">
+                            <div className="aboutData__desc-list">
+                            {descriptions.map((desc, i) => (
+                                <div key={i} className={`text text--1 aboutData__desc-list-el aboutData__desc-list-el--${i}`}>
+                                {desc.label} <p className="aboutData__desc-list-el-val" data-text={desc.value}>{textType(desc.value)}</p>
+                                </div>
+                            ))}
                             </div>
-                        ))}
+                            <div className="aboutData__desc-desc">
+                            <p className="text text--2">
+                                Fullstack Developer with 5+ years of commercial experience building and maintaining WordPress and WooCommerce solutions for clients across multiple industries. Specialized in custom WordPress theme development, WooCommerce customization, REST API integrations, website optimization, and performance improvements.
+                                <br /><br />
+                                Experienced in working with Agile teams, maintaining production systems, debugging complex issues, and delivering responsive, mobile-first websites. Strong understanding of frontend technologies, SEO optimization, UX/UI collaboration, and scalable WordPress architecture.
+                                <br /><br />
+                                Key strengths include problem-solving, fast adaptation to new technologies, analytical thinking, and efficient collaboration with developers, designers, and clients.
+                            </p>
+                            </div>
                         </div>
-                        <div className="aboutData__desc-desc">
-                        <p className="text text--2">
-                            Frontend Developer with many years of experience, specializing in creating WordPress 
-                            templates and WooCommerce stores. Quickly learns new technologies, works efficiently 
-                            in a team, and has experience leading a group. Outside of work, he develops his passions: 
-                            music production, fencing, video game development, and horseback riding.
-                        </p>
-                        </div>
                     </div>
-                    </div>
-                    <div className="col-12 col-lg-3 d-none d-lg-block">
-                    <div className="aboutData__human">
-                        <div className="aboutData__human-inner">{getSvg('human')}</div>
-                    </div>
-                    </div>
+
                     <div className="col-12 aboutData__brain-col">
-                    <div className="aboutData__brain">
-                        <div className="aboutData__brain-analyse corners">
-                        <p>ANALYSIS IN PROGRESS...</p>
+                        <div className="aboutData__brain">
+                            <div className="aboutData__brain-analyse corners">
+                                <p>ANALYSIS IN PROGRESS...</p>
+                            </div>
+                            <div className="aboutData__brain-inner">{getSvg('brain')}</div>
+                            {skills.map(renderSkill)}
                         </div>
-                        <div className="aboutData__brain-inner">{getSvg('brain')}</div>
-                        {skills.map(renderSkill)}
                     </div>
-                    </div>
+
                     <div className="col-12">
                         <div className="aboutData__cv">
                             <div className="aboutData__cv-part">
-                            <h3 className="aboutData__cv-part-title">[Work Experience]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Work Experience&gt;</h3>
                                 <div className="aboutData__cv-part-content">
                                     <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
-                                            [11.2025 - Present]<br />
-                                            <b>WordPress Developer at TS Marketing</b>
+                                            <b>WordPress Developer at TS Marketing</b><br />
+                                            <span className="text text--2">[11.2025 - Present]</span>
+                                            
                                         </p>
-                                        <p className="text text--3">
-                                            Creating, optimizing, debugging, and managing websites based on WordPress and WooCommerce, 
-                                            resolving SEO issues, providing customer support, and maintaining existing solutions, extracting and analyzing data from analytics tools
-                                        </p>
+                                        <ul className="text text--3">
+                                            <li>Develop and maintain WordPress and WooCommerce websites for commercial clients</li>
+                                            <li>Optimize website performance, loading speed, and SEO-related technical issues</li>
+                                            <li>Debug frontend and backend issues in production environments</li>
+                                            <li>Implement custom functionality and integrations based on client requirements</li>
+                                            <li>Provide technical support and maintenance for existing projects</li>
+                                            <li>Analyze website and user data using analytics tools</li>
+                                            <li>Collaborate with designers, developers, and project stakeholders</li>
+                                        </ul>
                                     </div>
                                     <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
-                                            [10.2024 - 09.2025]<br />
-                                            <b>Frontend Developer at Acclaim</b>
+                                            <b>Frontend Developer at Acclaim</b><br />
+                                            <span className="text text--2">[10.2024 - 09.2025]</span>
                                         </p>
-                                        <p className="text text--3">
-                                            Creating, optimizing, debugging, and managing websites based on WordPress and WooCommerce, 
-                                            resolving SEO issues, providing customer support, and maintaining existing solutions
-                                        </p>
+                                        <ul className="text text--3">
+                                            <li>Built and maintained responsive websites based on WordPress and WooCommerce</li>
+                                            <li>Improved website performance and resolved technical SEO issues</li>
+                                            <li>Maintained and optimized existing client solutions</li>
+                                            <li>Delivered client support and troubleshooting for production websites</li>
+                                            <li>Implemented frontend improvements and custom functionalities</li>
+                                        </ul>
                                     </div>
                                     <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
-                                            [08.2022 - 08.2024]<br />
-                                            <b>Frontend Developer at DotLineCode</b>
+                                            <b>Frontend Developer at DotLineCode</b><br />
+                                            <span className="text text--2">[08.2022 - 08.2024]</span>
                                         </p>
-                                        <p className="text text--3">
-                                            Coding templates and creating plugins for WordPress and stores based on WooCommerce.
-                                            Using ACF, REST API, design and implementation systems dedicated to the client. 
-                                            Creating animations using three.js and GSAP, servicing, operation and optimization of websites.
-                                        </p>
+                                        <ul className="text text--3">
+                                            <li>Developed custom WordPress themes and plugins</li>
+                                            <li>Created and customized WooCommerce stores</li>
+                                            <li>Built dynamic website sections using Advanced Custom Fields (ACF)</li>
+                                            <li>Implemented REST API integrations and dedicated client systems</li>
+                                            <li>Created advanced frontend animations using GSAP and Three.js</li>
+                                            <li>Maintained, optimized, and supported existing websites</li>
+                                            <li>Worked on responsive and performance-focused implementations</li>
+                                        </ul>
                                     </div>
                                     <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
-                                            [02.2021 - 07.2022]<br />
-                                            <b>Frontend Developer at Funktional</b>
+                                            <b>Frontend Developer at Funktional</b><br />
+                                            <span className="text text--2">[02.2021 - 07.2022]</span>
                                         </p>
-                                        <p className="text text--3">
-                                            Coding templates for WordPress using ACF.
-                                            Creation of stores based on WooCommerce. 
-                                            Website servicing, operation and optimization.
-                                        </p>
+                                        <ul className="text text--3">
+                                            <li>Developed custom WordPress templates using ACF</li>
+                                            <li>Built WooCommerce-based online stores</li>
+                                            <li>Maintained and optimized existing websites</li>
+                                            <li>Implemented responsive frontend solutions for client projects</li>
+                                            <li>Supported website operations and ongoing development</li>
+                                        </ul>
                                     </div>
                                     <div className="aboutData__cv-part-content-el">
                                         <p className="text text--1">
-                                            [09.2020 - 01.2021]<br />
-                                            <b>Junior Frontend Developer at Millenium Studio</b>
+                                            <b>Junior Frontend Developer at Millenium Studio</b><br />
+                                            <span className="text text--2">[09.2020 - 01.2021]</span>
                                         </p>
-                                        <p className="text text--3">
-                                            Modification of existing WordPress templates for the client using ACF.
-                                            Simple stores based on WooCommerce and PrestaShop.
-                                            Servicing, operation and website optimization.
-                                        </p>
-                                    </div>
-                                    <div className="aboutData__cv-part-content-el">
-                                        <p className="text text--1">
-                                            [09.2019 – 07.2020]<br />
-                                            <b>Junior Frontend Developer at CODESTICK</b>
-                                        </p>
-                                        <p className="text text--3">
-                                            Coding simple landing pages.
-                                            Simple online stores based on WooCommerce.
-                                            Website maintenance.
-                                        </p>
+                                        <ul className="text text--3">
+                                            <li>Modified and customized existing WordPress templates</li>
+                                            <li>Worked with Advanced Custom Fields (ACF)</li>
+                                            <li>Created simple WooCommerce and PrestaShop stores</li>
+                                            <li>Maintained and optimized client websites</li>
+                                            <li>Assisted in frontend development tasks and support</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Education]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Education&gt;</h3>
                                     <div className="aboutData__cv-part-content">
                                         <div className="aboutData__cv-part-content-el">
-                                        <p className="text text--1"><b>Computer Science Engineer</b><br /></p>
-                                        <p className="text text--3">College of Business - National Louis University located in Nowy Sącz [02/2023 – Present]</p>
+                                        <p className="text text--1"><b>Bachelor of Engineering in Computer Science</b><br /></p>
+                                        <p className="text text--3">Wyższa Szkoła Biznesu - National Louis University, Nowy Sącz, Poland [02.2023 - 03.2026]</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Skills]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Skills&gt;</h3>
                                 <div className="aboutData__cv-part-content">
+                                    <h4>Frontend</h4>
                                     <ul className="aboutData__cv-part-content-el">
-                                        <li className="text text--1">HTML5 / CSS3 / SASS</li>
-                                        <li className="text text--1">RWD / Mobile-first</li>
-                                        <li className="text text--1">JavaScript / jQuery</li>
-                                        <li className="text text--1">React</li>
-                                        <li className="text text--1">WordPress <br /> <span className="text text--3">Theme development and customization, ACF, optimization</span></li>
-                                        <li className="text text--1">WooCommerce <br /> <span className="text text--3">Store setup, API integrations, function customization</span></li>
-                                        <li className="text text--1">PHP</li>
-                                        <li className="text text--1">REST API / external integrations</li>
-                                        <li className="text text--1">UX/UI <br /> <span className="text text--3">Working with Figma, Adobe XD</span></li>
-                                        <li className="text text--1">Performance optimization</li>
+                                        <li>HTML5 / CSS3 / SASS / SCSS </li>
+                                        <li>JavaScript (ES6+) / jQuery / React </li>
+                                        <li>Responsive Web Design (RWD) / Mobile-First Development</li>
+                                        <li>GSAP / Three.js</li>
+                                    </ul>
+                                    <h4>WordPress & eCommerce</h4>
+                                    <ul className="aboutData__cv-part-content-el">  
+                                        <li>Custom WordPress Theme Development</li>
+                                        <li>Advanced Custom Fields (ACF)</li>
+                                        <li>WooCommerce Development & Customization</li>
+                                        <li>WordPress Optimization & Maintenance</li>
+                                        <li>Plugin Development</li>
+                                        <li>Technical SEO Improvements</li>
+                                        <li>Website Debugging & Support</li>
+                                    </ul>
+                                    <h4>Backend & Integrations</h4>
+                                    <ul className="aboutData__cv-part-content-el">  
+                                        <li>PHP</li>
+                                        <li>REST API / External API Integrations</li>
+                                        <li>Data Analysis from Analytics Tools</li>
+                                    </ul>
+                                    <h4>UX/UI & Tools</h4>
+                                    <ul className="aboutData__cv-part-content-el">  
+                                        <li>Figma</li>
+                                        <li>Adobe XD / Photoshop (basic)</li>
+                                        <li>Git</li>                    
+                                    </ul>
+                                    <h4>Additional</h4>
+                                    <ul className="aboutData__cv-part-content-el">  
+                                        <li>Unreal Engine 5</li>
+                                        <li>Reserve Corporal - Polish Army</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Soft Skills]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Soft Skills&gt;</h3>
                                 <div className="aboutData__cv-part-content">
                                     <ul className="aboutData__cv-part-content-el">
-                                        <li className="text text--1">Teamwork</li>
-                                        <li className="text text--1">Ability to work under pressure</li>
-                                        <li className="text text--1">Communication skills</li>
-                                        <li className="text text--1">Adaptability</li>
-                                        <li className="text text--1">Problem-solving</li>
-                                        <li className="text text--1">Creativity</li>
-                                        <li className="text text--1">Analytical thinking</li>
-                                        <li className="text text--1">Stress resistance</li>
-                                        <li className="text text--1">Openness to feedback</li>
+                                        <li>Teamwork</li>
+                                        <li>Communication</li>
+                                        <li>Problem-solving</li>
+                                        <li>Adaptability</li>
+                                        <li>Analytical thinking</li>
+                                        <li>Ability to work under pressure</li>
+                                        <li>Openness to feedback</li>
+                                        <li>Creativity</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Languages]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Languages&gt;</h3>
                                 <div className="aboutData__cv-part-content">
                                     <ul className="aboutData__cv-part-content-el">
-                                        <li className="text text--1">Polish (native)</li>
-                                        <li className="text text--1">English (B2)</li>
+                                        <li>Polish (native)</li>
+                                        <li>English (B2)</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Other Skills]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Courses and qualifications&gt;</h3>
                                 <div className="aboutData__cv-part-content">
                                     <ul className="aboutData__cv-part-content-el">
-                                        <li className="text text--1">Reserve Corporal, Polish Army</li>
-                                        <li className="text text--1">Basic knowledge of graphic programs and UI design <br /> <span className="text text--3">(Photoshop, Figma)</span></li>
-                                        <li className="text text--1">Basic video editing <br /> <span className="text text--3">(DaVinci Resolve)</span></li>
-                                        <li className="text text--1">Unreal Engine 5</li>
-                                        <li className="text text--1">Driver’s license <span>cat. A2, B</span></li>
-
+                                        <li>98-364:MTA Database Fundamentals</li>
+                                        <li>98-367:MTA Security Fundamentals</li>
+                                        <li>98-361:MTA Software Development Fundamentals</li>
+                                        <li>98-383:MTA Introduction to Programming using HTML and CSS</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Courses and qualifications]</h3>
+                                <h3 className="aboutData__cv-part-title">&lt;Interests&gt;</h3>
                                 <div className="aboutData__cv-part-content">
                                     <ul className="aboutData__cv-part-content-el">
-                                        <li className="text text--1">98-364:MTA Database Fundamentals</li>
-                                        <li className="text text--1">98-367:MTA Security Fundamentals</li>
-                                        <li className="text text--1">98-361:MTA Software Development Fundamentals</li>
-                                        <li className="text text--1">98-383:MTA Introduction to Programming using HTML and CSS</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="aboutData__cv-part">
-                                <h3 className="aboutData__cv-part-title">[Interests]</h3>
-                                <div className="aboutData__cv-part-content">
-                                    <ul className="aboutData__cv-part-content-el">
-                                        <li className="text text--1">HEMA (Historical European Martial Arts)</li>
-                                        <li className="text text--1">Horse Riding</li>
-                                        <li className="text text--1">Music production</li>
-                                        <li className="text text--1">Video games</li>
-                                        <li className="text text--1">History</li>
+                                        <li>HEMA (Historical European Martial Arts)</li>
+                                        <li>Horse Riding</li>
+                                        <li>Music production</li>
+                                        <li>Video games</li>
+                                        <li>History</li>
                                     </ul>
                                 </div>
                             </div>
@@ -330,6 +345,9 @@ export default function About() {
                 <div className="row">
                     <div className="col-12">
                         <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                            <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex" onClick={handleBackHomepage}>
+                                {getSvg('arrow_left')} 
+                            </div>
                             <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                             <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHomepage}>PORTFOLIO_CORE</div>
                             <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>

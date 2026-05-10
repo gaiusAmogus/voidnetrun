@@ -21,6 +21,7 @@ import { ReactComponent as Pointer6 } from '../svg/pointer_6.svg';
 import { ReactComponent as Pointer7 } from '../svg/pointer_7.svg';
 import { ReactComponent as CategoryIcon_web } from '../svg/categoryIcon__web.svg';
 import { ReactComponent as CategoryIcon_game } from '../svg/categoryIcon__game.svg';
+import { ReactComponent as arrow_left } from '../svg/arrow-left.svg';
 
 const svgs = {
     siteLine_1: SiteLine1,
@@ -46,6 +47,7 @@ const svgs = {
     pointer_7: Pointer7,
     categoryIcon__web: CategoryIcon_web,
     categoryIcon__game: CategoryIcon_game,
+    arrow_left: arrow_left,
 };
 
 export function getSvg(name) {

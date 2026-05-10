@@ -113,6 +113,9 @@ export default function Archive() {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex" onClick={handleBackHomepage}>
+                                    {getSvg('arrow_left')} 
+                                </div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHomepage}>PORTFOLIO_CORE</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>
@@ -182,6 +185,9 @@ export default function Archive() {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex" onClick={handleBackHomepage}>
+                                    {getSvg('arrow_left')} 
+                                </div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHomepage}>PORTFOLIO_CORE</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">/</div>

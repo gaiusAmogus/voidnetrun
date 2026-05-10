@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAnimFrom } from '../../functions/animTransform';
 import { customScrollbar } from '../../functions/customScrollbar';
+import { getSvg } from '../../functions/svgLoader';
 
 
 export default function ArchiveProject() {
@@ -53,6 +54,9 @@ export default function ArchiveProject() {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex"  onClick={handleBackArchive}>
+                                    {getSvg('arrow_left')} 
+                                </div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHome}>
                                     PORTFOLIO_CORE
@@ -70,7 +74,7 @@ export default function ArchiveProject() {
                     <div className="row" ref={contentRef}>
                         <div className="col-12">
                             <div className="archiveProject__thumb">
-                                <img src={`${window.location.origin}/${project.thumb}`} alt={project.title} />
+                                <img className="d-block" src={`${window.location.origin}/${project.thumb}`} alt={project.title} />
                             </div>
 
                         </div>
@@ -104,6 +108,9 @@ export default function ArchiveProject() {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex" onClick={handleBackArchive}>
+                                    {getSvg('arrow_left')} 
+                                </div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--home" onClick={handleBackHome}>
                                     PORTFOLIO_CORE

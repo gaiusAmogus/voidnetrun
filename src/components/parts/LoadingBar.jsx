@@ -12,17 +12,17 @@ export default function LoadingBar({ onFinish }) {
 
   useEffect(() => {
     let startTime = null;
-    const duration = 2500;
+    const duration = 1200;
     const keyframes = [
-      { percent: 0, time: 0 },
-      { percent: 21, time: 50 },
-      { percent: 22, time: 600 },
-      { percent: 37, time: 700 },
-      { percent: 38, time: 1200 },
-      { percent: 60, time: 1750 },
-      { percent: 76, time: 1800 },
-      { percent: 77, time: 2400 },
-      { percent: 100, time: 2500 },
+        { percent: 0, time: 0 },
+        { percent: 21, time: 24 },
+        { percent: 22, time: 288 },
+        { percent: 37, time: 336 },
+        { percent: 38, time: 576 },
+        { percent: 60, time: 840 },
+        { percent: 76, time: 864 },
+        { percent: 77, time: 1152 },
+        { percent: 100, time: 1200 },
     ];
 
     function update(timestamp) {

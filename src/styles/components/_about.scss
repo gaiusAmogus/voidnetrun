@@ -88,7 +88,7 @@
     }
 
     &__brain-col{
-        @media screen and (min-width: $min-xl){
+        @media screen and (min-width: $min-lg){
             min-height: 350px;
         }
     }
@@ -172,7 +172,7 @@
         }
         &-skillBar{
             position: absolute;
-            width: 162px;
+            width: 180px;
             height: 57px;
             opacity: 0;
 
@@ -180,6 +180,7 @@
                 width: 100%;
                 height: auto;
             }
+
             &-inner{
                 position: relative;
                 display: flex;
@@ -230,7 +231,7 @@
             }
             &--1{
                 top: -20px;
-                right: -220px;
+                right: -240px;
                 .aboutData__brain-skillBar-inner-title{
                     color: #F16529;
                 }
@@ -243,7 +244,7 @@
             }
             &--2{
                 top: 85px;
-                left: -230px;
+                left: -250px;
                 .aboutData__brain-skillBar-inner-title{
                     color: #61DAFB;
                 }
@@ -257,7 +258,7 @@
             }
             &--3{
                 top: 75px;
-                right: -210px;
+                right: -230px;
                 .aboutData__brain-skillBar-inner-title{
                     color: #13ED0F;
                 }
@@ -270,7 +271,7 @@
             }
             &--4{
                 top: 183px;
-                right: -210px;
+                right: -230px;
                 .aboutData__brain-skillBar-inner-title{
                     color: #4F5B93;
                 }
@@ -284,7 +285,7 @@
             }
             &--5{
                 top: 255px;
-                left: -80px;
+                left: -100px;
                 .aboutData__brain-skillBar-inner-title{
                     color: #9D6193;
                 }
@@ -298,7 +299,7 @@
             }
             &--6{
                 top: 255px;
-                right: -25px;
+                right: -45px;
                 .aboutData__brain-skillBar-inner-title{
                     color: #32373C;
                 }

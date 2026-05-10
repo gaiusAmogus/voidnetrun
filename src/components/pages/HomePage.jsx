@@ -58,6 +58,8 @@ export default function HomePage() {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumbs d-flex align-items-center flex-wrap">
+                                <div className="breadcrumbs__el breadcrumbs__el--go-back d-flex">
+                                </div>
                                 <div className="breadcrumbs__el breadcrumbs__el--separator">V://</div>
                                 <div className="breadcrumbs__el breadcrumbs__el--currentEl">PORTFOLIO_CORE</div>
                             </div>

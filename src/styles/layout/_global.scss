@@ -73,6 +73,11 @@ section {
             opacity: 1;
         }
 
+        &--go-back {
+            min-width: 24px;
+            min-height: 24px;
+        }
+
         &--home {
             text-transform: uppercase;
         }

@@ -229,7 +229,7 @@
                 "assets/img/sites/grochiproch/6.jpg",
                 "assets/img/sites/grochiproch/7.jpg"
             ],
-            "link": "https://dev.grochiproch.pl"
+            "link": "https://grochiproch.voidnetrun.it"
         },
         {
             "id": 15,
@@ -246,6 +246,21 @@
                 "assets/img/sites/spacewar/4.jpg"
             ],
             "link": "https://spacewar.voidnetrun.it"
+        },
+        {
+            "id": 16,
+            "slug": "skanbudynkow",
+            "title": "Skanbudynkow.pl",
+            "category": "Headless CMS/WordPress",
+            "category_slug": "web",
+            "excerpt": "A modern service website built with WordPress, Next.js, Carbon Fields, and GSAP animations.",
+            "desc": "The website was developed for a service-based company using a modern headless CMS architecture that combines WordPress as a content management backend with a Next.js frontend application. This approach provides high performance, improved scalability, and a flexible development environment while maintaining a convenient and familiar content management experience for the client. The entire website is fully editable through a customized administration panel powered by Carbon Fields, allowing easy management of content, sections, and dynamic website elements without requiring technical knowledge. The frontend includes a wide range of advanced GSAP animations that enhance user interaction, improve visual flow, and create a more engaging browsing experience across the site.",
+            "thumb": "assets/img/sites/skanbudynkow/1.jpg",
+            "images": [
+                "assets/img/sites/skanbudynkow/2.jpg",
+                "assets/img/sites/skanbudynkow/3.jpg"
+            ],
+            "link": "https://skanbudynkow.pl"
         }
     ]
 }
