@@ -1,34 +1,69 @@
-# React & Tailwind CSS Starter Pack
+# voidnetrun - Portfolio
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+This project is a personal portfolio website built as a futuristic cyber system interface inspired by cyberpunk aesthetics, terminal UI, neon accents, and hacker-style dashboard design.
 
-## Usage
+It presents my work, skills, and projects in a stylized way that blends code, technology, and sci-fi storytelling into a single experience.
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+## About the project
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+- Portfolio in a cyberpunk / cyber-system visual style
+- Responsive single-page experience built with React
+- Custom routes for About, Archive, and project detail pages
+- Data-driven project archive using JSON
+- GitHub Pages deployment support
+- Browser router configured for subpath hosting
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+## Tech stack
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+- React
+- React Router
+- Sass
+- Create React App
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+## Local development
 
-## Contributing
+Install dependencies:
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+```bash
+npm install
+```
 
-TO RUN PROD:
+Run the app locally:
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+## Production build
+
+```bash
 npm run build
+```
+
+## GitHub Pages deployment
+
+This project is configured for deployment to GitHub Pages under the repository path:
+
+```text
+https://gaiusamogus.github.io/voidnetrun/
+```
+
+The app includes GitHub Actions deployment workflow and SPA routing support for direct links such as:
+
+- `/about`
+- `/archive`
+- `/archive/:projectSlug`
+
+## Project concept
+
+The visual identity is built around the feeling of browsing a cybernetic system interface: neon text, terminal-inspired structure, data modules, glitch motion, and bold sci-fi styling. The whole experience is designed to feel like an interactive portfolio panel inside a futuristic operating system.
+
+## License
+
+This project is for personal portfolio use.

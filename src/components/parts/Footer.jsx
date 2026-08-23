@@ -13,8 +13,8 @@ export default function Footer() {
                 <div className="footer__row-el footer__row-el--2">
                     <p>
                         <span>If you want to offer me cooperation write to </span>
-                        <a href="mailto:contact@voidnetrun.it" className="link link--red">
-                            contact@voidnetrun.it
+                        <a href="mailto:dawid.jedynak97@gmail.com" className="link link--red">
+                            dawid.jedynak97@gmail.com
                         </a>
                     </p>
                     <a href="https://www.linkedin.com/in/dawid-jedynak-4b9991322/" target="_blank" rel="noreferrer">
