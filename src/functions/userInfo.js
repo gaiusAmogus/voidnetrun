@@ -42,18 +42,18 @@ export function getBrowserInfo() {
         else if (userAgent.indexOf("Windows NT 5.1") !== -1) systemVersion = "XP";
     } else if (userAgent.indexOf("Mac") !== -1) {
         platform = "Macintosh";
-        const match = /Mac OS X (\d+[\.\_\d]+)/.exec(userAgent);
-        systemVersion = match ? match[1].replace('_', '.') : systemVersion;
+        const match = /Mac OS X (\d+(?:[._]\d+)*)/.exec(userAgent);
+        systemVersion = match ? match[1].replace(/_/g, '.') : systemVersion;
     } else if (userAgent.indexOf("Linux") !== -1) {
         platform = "Linux";
     } else if (userAgent.indexOf("Android") !== -1) {
         platform = "Android";
-        const match = /Android (\d+[\.\_\d]+)/.exec(userAgent);
-        systemVersion = match ? match[1] : systemVersion;
+        const match = /Android (\d+(?:[._]\d+)*)/.exec(userAgent);
+        systemVersion = match ? match[1].replace(/_/g, '.') : systemVersion;
     } else if (userAgent.indexOf("like Mac") !== -1) {
         platform = "iOS";
-        const match = /CPU (?:iPhone )?OS (\d+[\_\d]+)/.exec(userAgent);
-        systemVersion = match ? match[1].replace('_', '.') : systemVersion;
+        const match = /CPU (?:iPhone )?OS (\d+(?:[_]\d+)*)/.exec(userAgent);
+        systemVersion = match ? match[1].replace(/_/g, '.') : systemVersion;
     }
 
     return {
