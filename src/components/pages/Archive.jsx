@@ -27,10 +27,10 @@ export default function Archive() {
 
         async function fetchProjects() {
             try {
-                const response = await fetch('/vendor/projects.json?v=' + new Date().getTime());
+                const projectsUrl = `${process.env.PUBLIC_URL || ''}/vendor/projects.json?v=${new Date().getTime()}`;
+                const response = await fetch(projectsUrl);
                 if (!response.ok) throw new Error('Failed to fetch projects');
                 const data = await response.json();
-                // Sort Desc by ID
                 const sortedProjects = data.projects.sort((a, b) => b.id - a.id);
                 setProjects(sortedProjects);
             } catch (err) {

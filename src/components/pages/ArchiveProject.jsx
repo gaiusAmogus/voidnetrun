@@ -18,7 +18,8 @@ export default function ArchiveProject() {
     useEffect(() => {
         async function fetchProject() {
             try {
-                const response = await fetch('/vendor/projects.json?v=' + new Date().getTime());
+                const projectsUrl = `${process.env.PUBLIC_URL || ''}/vendor/projects.json?v=${new Date().getTime()}`;
+                const response = await fetch(projectsUrl);
                 if (!response.ok) throw new Error('Failed to fetch projects');
                 const data = await response.json();
                 const foundProject = data.projects.find(p => p.slug === projectSlug);
@@ -74,7 +75,7 @@ export default function ArchiveProject() {
                     <div className="row" ref={contentRef}>
                         <div className="col-12">
                             <div className="archiveProject__thumb">
-                                <img className="d-block" src={`${window.location.origin}/${project.thumb}`} alt={project.title} />
+                                <img className="d-block" src={`${process.env.PUBLIC_URL || ''}/${project.thumb}`} alt={project.title} />
                             </div>
 
                         </div>
@@ -91,7 +92,7 @@ export default function ArchiveProject() {
                             <div className="archiveProject__gallery d-flex flex-column">
                                 {project.images && project.images.length > 0 ? (
                                     project.images.map((img, idx) => (
-                                        <img key={idx} src={`${window.location.origin}/${img}`} alt={`${project.title} ${idx + 1}`} />
+                                        <img key={idx} src={`${process.env.PUBLIC_URL || ''}/${img}`} alt={`${project.title} ${idx + 1}`} />
                                     ))
                                 ) : (
                                     <p>No additional images</p>

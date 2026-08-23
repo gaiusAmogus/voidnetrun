@@ -8,6 +8,24 @@ import About from './components/pages/About';
 import Archive from './components/pages/Archive';
 import ArchiveProject from './components/pages/ArchiveProject';
 
+function getRouterBasename() {
+    if (process.env.NODE_ENV === 'development') {
+        return '/';
+    }
+
+    if (!process.env.PUBLIC_URL) {
+        return '/voidnetrun';
+    }
+
+    try {
+        const pathname = new URL(process.env.PUBLIC_URL).pathname;
+        return pathname || '/voidnetrun';
+    } catch {
+        const cleaned = process.env.PUBLIC_URL.replace(/\/+$/, '');
+        return cleaned.startsWith('/') ? cleaned : `/${cleaned}`;
+    }
+}
+
 function ContentWrapper({ loadingFinished }) {
     const location = useLocation();
     const contentRef = useRef(null);
@@ -38,9 +56,7 @@ function ContentWrapper({ loadingFinished }) {
 
             const headerFooterSpace = header.offsetHeight + footer.offsetHeight + extraSpace;
             contentRef.current.style.maxHeight = `calc(100% - ${headerFooterSpace}px)`;
-}
-
-
+        }
 
         updateContentHeight();
         window.addEventListener('resize', updateContentHeight);
@@ -50,35 +66,51 @@ function ContentWrapper({ loadingFinished }) {
     return (
         <div className="contentContainer" ref={contentRef}>
             <div id="pageTitle">VoidnetRun()</div>
-        {loadingFinished && (
-            <Routes location={location}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/archive" element={<Archive />} />
-            <Route path="/archive/:projectSlug" element={<ArchiveProject />} />    
-            </Routes>
-        )}
+            {loadingFinished && (
+                <Routes location={location}>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/archive" element={<Archive />} />
+                    <Route path="/archive/:projectSlug" element={<ArchiveProject />} />
+                </Routes>
+            )}
         </div>
     );
-    }
+}
 
-    export default function App() {
+export default function App() {
     const [loadingFinished, setLoadingFinished] = useState(false);
     const [loadingCompleted, setLoadingCompleted] = useState(false);
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const redirectedPath = params.get('p');
+
+        if (!redirectedPath) return;
+
+        const base = getRouterBasename();
+        const safeBase = base === '/' ? '' : base;
+        const normalizedPath = redirectedPath.startsWith('/') ? redirectedPath : `/${redirectedPath}`;
+        const targetUrl = `${safeBase}${normalizedPath}`;
+
+        if (window.location.pathname !== targetUrl) {
+            window.history.replaceState({}, '', targetUrl);
+        }
+    }, []);
+
     const handleLoadingFinish = () => {
         setTimeout(() => {
-        setLoadingFinished(true);
-        setLoadingCompleted(true);
+            setLoadingFinished(true);
+            setLoadingCompleted(true);
         }, 3000);
     };
 
     return (
-        <BrowserRouter>
-        <Header />
-        <LoadingBar onFinish={handleLoadingFinish} finished={loadingCompleted} />
-        <ContentWrapper loadingFinished={loadingFinished} />
-        <Footer />
+        <BrowserRouter basename={getRouterBasename()}>
+            <Header />
+            <LoadingBar onFinish={handleLoadingFinish} finished={loadingCompleted} />
+            <ContentWrapper loadingFinished={loadingFinished} />
+            <Footer />
         </BrowserRouter>
     );
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      (() => {
+        const currentPath = window.location.pathname;
+        const repoBase = '/voidnetrun';
+        const relativePath = currentPath.startsWith(repoBase)
+          ? currentPath.slice(repoBase.length) || '/'
+          : window.location.pathname || '/';
+
+        const targetPath = relativePath && relativePath !== '/' ? relativePath : '/';
+        const redirectTarget = `${repoBase}/?p=${encodeURIComponent(targetPath)}`;
+        window.location.replace(redirectTarget);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

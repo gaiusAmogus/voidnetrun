@@ -2,6 +2,7 @@
     "name": "react-tailwind-css-starter-pack",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://gaiusamogus.github.io/voidnetrun",
     "dependencies": {
         "overlayscrollbars": "^2.14.0",
         "react": "^18.3.1",

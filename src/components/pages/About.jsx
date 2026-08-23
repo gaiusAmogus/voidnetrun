@@ -126,7 +126,7 @@ export default function About() {
                 <div className="row" ref={contentRef}>
                     <div className="col-12 col-lg-4">
                         <div className="aboutData__prof">
-                            <img src={`${window.location.origin}/assets/img/prof.jpg`} alt="profilPicture" />
+                            <img src={`${process.env.PUBLIC_URL || ''}/assets/img/prof.jpg`} alt="profilPicture" />
                         </div>
                     </div>
 
