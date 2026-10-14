@@ -10,7 +10,9 @@ import ArchiveProject from './components/pages/ArchiveProject';
 
 function getRouterBasename() {
     if (process.env.NODE_ENV === 'development') {
-        return '/';
+        const localBase = '/voidnetrun';
+        const pathname = window.location.pathname;
+        return pathname === localBase || pathname.startsWith(`${localBase}/`) ? localBase : '/';
     }
 
     if (!process.env.PUBLIC_URL) {
